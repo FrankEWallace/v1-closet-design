@@ -14,6 +14,13 @@ export const mockClothingItems: ClothingItem[] = [
     lastWorn: '2024-01-15',
     material: '100% Cashmere',
     condition: 'excellent',
+    wearLog: [
+      { date: '2024-01-15', occasion: 'Office' },
+      { date: '2024-01-10', occasion: 'Dinner' },
+      { date: '2024-01-03', occasion: 'Brunch' },
+      { date: '2023-12-28' },
+      { date: '2023-12-20', occasion: 'Holiday party' },
+    ],
   },
   {
     id: '2',
@@ -28,6 +35,12 @@ export const mockClothingItems: ClothingItem[] = [
     lastWorn: '2024-01-18',
     material: 'Virgin Wool',
     condition: 'excellent',
+    wearLog: [
+      { date: '2024-01-18', occasion: 'Meeting' },
+      { date: '2024-01-15', occasion: 'Office' },
+      { date: '2024-01-12' },
+      { date: '2024-01-08', occasion: 'Presentation' },
+    ],
   },
   {
     id: '3',
@@ -42,6 +55,10 @@ export const mockClothingItems: ClothingItem[] = [
     lastWorn: '2024-01-10',
     material: '100% Silk',
     condition: 'good',
+    wearLog: [
+      { date: '2024-01-10', occasion: 'Date night' },
+      { date: '2024-01-03', occasion: 'Gallery opening' },
+    ],
   },
   {
     id: '4',
@@ -58,6 +75,11 @@ export const mockClothingItems: ClothingItem[] = [
     condition: 'excellent',
     forSale: true,
     price: 1200,
+    wearLog: [
+      { date: '2024-01-20', occasion: 'Weekend stroll' },
+      { date: '2024-01-18', occasion: 'Meeting' },
+      { date: '2024-01-15', occasion: 'Office' },
+    ],
   },
   {
     id: '5',
@@ -72,6 +94,14 @@ export const mockClothingItems: ClothingItem[] = [
     material: 'Italian Suede',
     condition: 'good',
     size: '38',
+    wearLog: [
+      { date: '2024-01-22' },
+      { date: '2024-01-20', occasion: 'Weekend stroll' },
+      { date: '2024-01-18' },
+      { date: '2024-01-15' },
+      { date: '2024-01-12' },
+      { date: '2024-01-10' },
+    ],
   },
   {
     id: '6',
@@ -86,6 +116,15 @@ export const mockClothingItems: ClothingItem[] = [
     lastWorn: '2024-01-21',
     material: '100% Organic Cotton',
     condition: 'good',
+    wearLog: [
+      { date: '2024-01-21', occasion: 'Casual' },
+      { date: '2024-01-18', occasion: 'Gym' },
+      { date: '2024-01-15' },
+      { date: '2024-01-12', occasion: 'Casual' },
+      { date: '2024-01-10' },
+      { date: '2024-01-08', occasion: 'Errands' },
+      { date: '2024-01-05' },
+    ],
   },
   {
     id: '7',
@@ -102,6 +141,10 @@ export const mockClothingItems: ClothingItem[] = [
     condition: 'excellent',
     forSale: true,
     price: 350,
+    wearLog: [
+      { date: '2024-01-19', occasion: 'Client dinner' },
+      { date: '2024-01-15', occasion: 'Office' },
+    ],
   },
   {
     id: '8',
@@ -115,6 +158,10 @@ export const mockClothingItems: ClothingItem[] = [
     lastWorn: '2024-01-08',
     material: '100% Linen',
     condition: 'excellent',
+    wearLog: [
+      { date: '2024-01-08', occasion: 'Brunch' },
+      { date: '2024-01-03' },
+    ],
   },
 ];
 
