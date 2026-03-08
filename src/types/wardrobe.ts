@@ -3,6 +3,11 @@ export type ClothingStatus = 'clean' | 'dirty' | 'laundry';
 export type Category = 'tops' | 'bottoms' | 'dresses' | 'outerwear' | 'shoes' | 'accessories';
 export type Condition = 'new' | 'excellent' | 'good' | 'fair' | 'worn';
 
+export interface WearLogEntry {
+  date: string;
+  occasion?: string;
+}
+
 export interface ClothingItem {
   id: string;
   name: string;
@@ -19,6 +24,7 @@ export interface ClothingItem {
   price?: number;
   forSale?: boolean;
   size?: string;
+  wearLog?: WearLogEntry[];
 }
 
 export interface Outfit {
