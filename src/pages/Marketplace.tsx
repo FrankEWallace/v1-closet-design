@@ -110,21 +110,21 @@ const Marketplace = () => {
                 </div>
 
                 {/* Content */}
-                <div className="p-4 space-y-3">
+                <div className="p-3 md:p-4 space-y-2 md:space-y-3">
                   {/* Brand & Category */}
                   <div className="flex items-center justify-between">
-                    <span className="mono-caption">{item.brand}</span>
-                    <span className="mono-caption">{item.category}</span>
+                    <span className="mono-caption text-[9px] md:text-xs">{item.brand}</span>
+                    <span className="mono-caption text-[9px] md:text-xs hidden sm:inline">{item.category}</span>
                   </div>
 
                   {/* Name */}
-                  <h3 className="font-display text-lg leading-tight group-hover:text-muted-foreground transition-colors">
+                  <h3 className="font-display text-sm md:text-lg leading-tight group-hover:text-muted-foreground transition-colors line-clamp-1">
                     {item.name}
                   </h3>
 
                   {/* Price & Sustainability */}
                   <div className="flex items-center justify-between pt-2 border-t border-border/50">
-                    <p className="font-display text-xl">
+                    <p className="font-display text-base md:text-xl">
                       ${item.price?.toLocaleString()}
                     </p>
                     <div className="flex items-center gap-1.5">
