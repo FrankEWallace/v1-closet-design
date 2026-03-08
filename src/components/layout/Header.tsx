@@ -98,6 +98,26 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
+            <div className="pt-2 border-t border-border/50">
+              {user ? (
+                <Link
+                  to="/profile"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center gap-3 font-body text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <User size={16} />
+                  Profile
+                </Link>
+              ) : (
+                <Link
+                  to="/auth"
+                  onClick={() => setMobileOpen(false)}
+                  className="block font-body text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Sign In
+                </Link>
+              )}
+            </div>
           </div>
         </nav>
       )}
