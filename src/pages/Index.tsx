@@ -15,15 +15,15 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="container mx-auto px-6 lg:px-12 py-12 md:py-20">
-        <div className="max-w-3xl space-y-6 opacity-0 animate-fade-up">
+      <section className="container mx-auto px-4 md:px-6 lg:px-12 py-8 md:py-20">
+        <div className="max-w-3xl space-y-4 md:space-y-6 opacity-0 animate-fade-up">
           <p className="mono-caption">Digital Wardrobe</p>
           <h1 className="editorial-heading">
             Your Personal
             <br />
             <em className="italic">Style Archive</em>
           </h1>
-          <p className="font-body text-muted-foreground max-w-lg leading-relaxed">
+          <p className="font-body text-sm md:text-base text-muted-foreground max-w-lg leading-relaxed">
             Curate, organize, and elevate your wardrobe. 
             Track sustainability, plan outfits, and rediscover your personal style.
           </p>
