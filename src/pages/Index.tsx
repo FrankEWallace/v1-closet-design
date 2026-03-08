@@ -32,23 +32,23 @@ const Index = () => {
 
       {/* Stats Bar */}
       <section className="border-y border-border/50">
-        <div className="container mx-auto px-6 lg:px-12">
+        <div className="container mx-auto px-4 md:px-6 lg:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-border/50">
             {[
               { label: 'Total Items', value: mockClothingItems.length },
               { label: 'Clean', value: mockClothingItems.filter(i => i.status === 'clean').length },
-              { label: 'Avg. Sustainability', value: `${Math.round(mockClothingItems.reduce((acc, i) => acc + i.sustainabilityScore, 0) / mockClothingItems.length)}/10` },
+              { label: 'Sustainability', value: `${Math.round(mockClothingItems.reduce((acc, i) => acc + i.sustainabilityScore, 0) / mockClothingItems.length)}/10` },
               { label: 'Categories', value: new Set(mockClothingItems.map(i => i.category)).size },
             ].map((stat, index) => (
               <div 
                 key={stat.label} 
                 className={cn(
-                  'py-6 md:py-8 px-4 text-center opacity-0 animate-fade-up',
+                  'py-4 md:py-8 px-3 md:px-4 text-center opacity-0 animate-fade-up',
                   `stagger-${index + 1}`
                 )}
               >
-                <p className="font-display text-2xl md:text-3xl mb-1">{stat.value}</p>
-                <p className="mono-caption">{stat.label}</p>
+                <p className="font-display text-xl md:text-3xl mb-1">{stat.value}</p>
+                <p className="mono-caption text-[10px] md:text-xs">{stat.label}</p>
               </div>
             ))}
           </div>
