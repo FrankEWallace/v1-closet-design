@@ -149,15 +149,15 @@ const Marketplace = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="container mx-auto px-6 lg:px-12 py-20">
-        <div className="glass-card rounded-2xl p-12 text-center space-y-6 opacity-0 animate-fade-up">
+      <section className="container mx-auto px-4 md:px-6 lg:px-12 py-12 md:py-20">
+        <div className="glass-card rounded-xl md:rounded-2xl p-6 md:p-12 text-center space-y-4 md:space-y-6 opacity-0 animate-fade-up">
           <h2 className="editorial-subheading">
             Ready to Sell?
           </h2>
-          <p className="font-body text-muted-foreground max-w-md mx-auto">
+          <p className="font-body text-sm md:text-base text-muted-foreground max-w-md mx-auto">
             List items from your wardrobe and connect with conscious shoppers looking for quality pieces.
           </p>
-          <Button variant="premium" size="xl">
+          <Button variant="premium" size="lg">
             List Your Items
           </Button>
         </div>

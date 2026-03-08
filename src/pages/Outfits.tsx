@@ -43,7 +43,7 @@ const Outfits = () => {
             </div>
 
             {/* Drag & Drop Canvas */}
-            <div className="glass-card rounded-xl p-8 min-h-[500px] border border-dashed border-border">
+            <div className="glass-card rounded-xl p-4 md:p-8 min-h-[300px] md:min-h-[500px] border border-dashed border-border">
               {selectedItems.length === 0 ? (
                 <div className="h-full flex flex-col items-center justify-center text-center space-y-4">
                   <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center">

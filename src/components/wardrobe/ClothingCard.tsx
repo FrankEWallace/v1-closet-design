@@ -69,44 +69,47 @@ export function ClothingCard({ item, index = 0 }: ClothingCardProps) {
         </div>
 
         {/* Content */}
-        <div className="p-4 space-y-3">
+        <div className="p-3 md:p-4 space-y-2 md:space-y-3">
           {/* Category & Brand */}
           <div className="flex items-center justify-between">
-            <span className="mono-caption">{item.category}</span>
-            <span className="mono-caption">{item.brand}</span>
+            <span className="mono-caption text-[9px] md:text-xs">{item.category}</span>
+            <span className="mono-caption text-[9px] md:text-xs hidden sm:inline">{item.brand}</span>
           </div>
 
           {/* Name */}
-          <h3 className="font-display text-lg leading-tight group-hover:text-muted-foreground transition-colors">
+          <h3 className="font-display text-sm md:text-lg leading-tight group-hover:text-muted-foreground transition-colors line-clamp-1">
             {item.name}
           </h3>
 
           {/* Meta Row */}
           <div className="flex items-center justify-between pt-2 border-t border-border/50">
             {/* Sustainability */}
-            <div className="flex items-center gap-1.5">
-              <Leaf size={12} className="text-sage" />
-              <span className="font-body text-xs text-muted-foreground">
+            <div className="flex items-center gap-1">
+              <Leaf size={10} className="text-sage md:w-3 md:h-3" />
+              <span className="font-body text-[10px] md:text-xs text-muted-foreground">
                 {item.sustainabilityScore}/10
               </span>
             </div>
 
             {/* Last Worn */}
-            <div className="flex items-center gap-1.5">
-              <Calendar size={12} className="text-muted-foreground" />
-              <span className="font-body text-xs text-muted-foreground">
+            <div className="flex items-center gap-1">
+              <Calendar size={10} className="text-muted-foreground md:w-3 md:h-3" />
+              <span className="font-body text-[10px] md:text-xs text-muted-foreground">
                 {formatDate(item.lastWorn)}
               </span>
             </div>
           </div>
 
           {/* Season Tags */}
-          <div className="flex flex-wrap gap-1.5">
-            {item.seasons.map((season) => (
-              <Badge key={season} variant="season" className="text-[10px]">
+          <div className="flex flex-wrap gap-1">
+            {item.seasons.slice(0, 2).map((season) => (
+              <Badge key={season} variant="season" className="text-[8px] md:text-[10px] px-1.5 md:px-2">
                 {season}
               </Badge>
             ))}
+            {item.seasons.length > 2 && (
+              <span className="font-body text-[8px] md:text-[10px] text-muted-foreground">+{item.seasons.length - 2}</span>
+            )}
           </div>
         </div>
       </article>

@@ -18,13 +18,13 @@ interface CategoryFilterProps {
 
 export function CategoryFilter({ selected, onChange }: CategoryFilterProps) {
   return (
-    <div className="flex flex-wrap gap-2 md:gap-4">
+    <div className="flex gap-1.5 md:gap-4 overflow-x-auto scrollbar-hide pb-1 -mx-4 px-4 md:mx-0 md:px-0">
       {categories.map((cat) => (
         <button
           key={cat.value}
           onClick={() => onChange(cat.value)}
           className={cn(
-            'font-body text-xs tracking-widest uppercase px-4 py-2 rounded-sm transition-all duration-300',
+            'font-body text-[10px] md:text-xs tracking-widest uppercase px-3 md:px-4 py-1.5 md:py-2 rounded-sm transition-all duration-300 whitespace-nowrap flex-shrink-0',
             selected === cat.value
               ? 'bg-foreground text-background'
               : 'text-muted-foreground hover:text-foreground hover:bg-secondary'

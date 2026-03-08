@@ -151,11 +151,11 @@ const ItemDetail = () => {
             </div>
 
             {/* Actions */}
-            <div className="flex flex-wrap gap-4 pt-4">
-              <Button variant="premium" size="lg">
+            <div className="flex gap-3 md:gap-4 pt-4">
+              <Button variant="premium" size="default" className="flex-1 md:flex-none">
                 Add to Outfit
               </Button>
-              <Button variant="editorial" size="lg">
+              <Button variant="editorial" size="default" className="flex-1 md:flex-none">
                 Mark as Worn
               </Button>
             </div>
