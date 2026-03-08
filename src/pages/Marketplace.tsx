@@ -27,15 +27,15 @@ const Marketplace = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="container mx-auto px-6 lg:px-12 py-12 md:py-20">
-        <div className="max-w-3xl space-y-6 opacity-0 animate-fade-up">
+      <section className="container mx-auto px-4 md:px-6 lg:px-12 py-8 md:py-20">
+        <div className="max-w-3xl space-y-4 md:space-y-6 opacity-0 animate-fade-up">
           <p className="mono-caption">Marketplace</p>
           <h1 className="editorial-heading">
             Curated
             <br />
             <em className="italic">Pre-Loved Pieces</em>
           </h1>
-          <p className="font-body text-muted-foreground max-w-lg leading-relaxed">
+          <p className="font-body text-sm md:text-base text-muted-foreground max-w-lg leading-relaxed">
             Discover authenticated, pre-owned fashion from discerning wardrobes. 
             Sustainable luxury, curated with care.
           </p>
