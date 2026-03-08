@@ -43,8 +43,8 @@ const Marketplace = () => {
       </section>
 
       {/* Filter Bar */}
-      <section className="border-y border-border/50 sticky top-16 md:top-20 z-40 glass-card">
-        <div className="container mx-auto px-6 lg:px-12">
+      <section className="border-y border-border/50 sticky top-14 md:top-20 z-40 glass-card">
+        <div className="container mx-auto px-4 md:px-6 lg:px-12">
           <div className="flex items-center justify-between py-4">
             <p className="font-body text-sm text-muted-foreground">
               {allMarketplaceItems.length} items available
