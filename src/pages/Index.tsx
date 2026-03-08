@@ -15,15 +15,15 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="container mx-auto px-6 lg:px-12 py-12 md:py-20">
-        <div className="max-w-3xl space-y-6 opacity-0 animate-fade-up">
+      <section className="container mx-auto px-4 md:px-6 lg:px-12 py-8 md:py-20">
+        <div className="max-w-3xl space-y-4 md:space-y-6 opacity-0 animate-fade-up">
           <p className="mono-caption">Digital Wardrobe</p>
           <h1 className="editorial-heading">
             Your Personal
             <br />
             <em className="italic">Style Archive</em>
           </h1>
-          <p className="font-body text-muted-foreground max-w-lg leading-relaxed">
+          <p className="font-body text-sm md:text-base text-muted-foreground max-w-lg leading-relaxed">
             Curate, organize, and elevate your wardrobe. 
             Track sustainability, plan outfits, and rediscover your personal style.
           </p>
@@ -32,23 +32,23 @@ const Index = () => {
 
       {/* Stats Bar */}
       <section className="border-y border-border/50">
-        <div className="container mx-auto px-6 lg:px-12">
+        <div className="container mx-auto px-4 md:px-6 lg:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-border/50">
             {[
               { label: 'Total Items', value: mockClothingItems.length },
               { label: 'Clean', value: mockClothingItems.filter(i => i.status === 'clean').length },
-              { label: 'Avg. Sustainability', value: `${Math.round(mockClothingItems.reduce((acc, i) => acc + i.sustainabilityScore, 0) / mockClothingItems.length)}/10` },
+              { label: 'Sustainability', value: `${Math.round(mockClothingItems.reduce((acc, i) => acc + i.sustainabilityScore, 0) / mockClothingItems.length)}/10` },
               { label: 'Categories', value: new Set(mockClothingItems.map(i => i.category)).size },
             ].map((stat, index) => (
               <div 
                 key={stat.label} 
                 className={cn(
-                  'py-6 md:py-8 px-4 text-center opacity-0 animate-fade-up',
+                  'py-4 md:py-8 px-3 md:px-4 text-center opacity-0 animate-fade-up',
                   `stagger-${index + 1}`
                 )}
               >
-                <p className="font-display text-2xl md:text-3xl mb-1">{stat.value}</p>
-                <p className="mono-caption">{stat.label}</p>
+                <p className="font-display text-xl md:text-3xl mb-1">{stat.value}</p>
+                <p className="mono-caption text-[10px] md:text-xs">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -56,9 +56,9 @@ const Index = () => {
       </section>
 
       {/* Wardrobe Grid */}
-      <section className="container mx-auto px-6 lg:px-12 py-12 md:py-20">
+      <section className="container mx-auto px-4 md:px-6 lg:px-12 py-8 md:py-20">
         {/* Filters */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-6 mb-8 md:mb-12">
           <h2 className="editorial-subheading">Your Collection</h2>
           <CategoryFilter 
             selected={selectedCategory} 
@@ -67,7 +67,7 @@ const Index = () => {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-8">
           {filteredItems.map((item, index) => (
             <ClothingCard key={item.id} item={item} index={index} />
           ))}

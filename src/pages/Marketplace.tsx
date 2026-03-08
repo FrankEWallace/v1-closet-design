@@ -27,15 +27,15 @@ const Marketplace = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="container mx-auto px-6 lg:px-12 py-12 md:py-20">
-        <div className="max-w-3xl space-y-6 opacity-0 animate-fade-up">
+      <section className="container mx-auto px-4 md:px-6 lg:px-12 py-8 md:py-20">
+        <div className="max-w-3xl space-y-4 md:space-y-6 opacity-0 animate-fade-up">
           <p className="mono-caption">Marketplace</p>
           <h1 className="editorial-heading">
             Curated
             <br />
             <em className="italic">Pre-Loved Pieces</em>
           </h1>
-          <p className="font-body text-muted-foreground max-w-lg leading-relaxed">
+          <p className="font-body text-sm md:text-base text-muted-foreground max-w-lg leading-relaxed">
             Discover authenticated, pre-owned fashion from discerning wardrobes. 
             Sustainable luxury, curated with care.
           </p>
@@ -43,8 +43,8 @@ const Marketplace = () => {
       </section>
 
       {/* Filter Bar */}
-      <section className="border-y border-border/50 sticky top-16 md:top-20 z-40 glass-card">
-        <div className="container mx-auto px-6 lg:px-12">
+      <section className="border-y border-border/50 sticky top-14 md:top-20 z-40 glass-card">
+        <div className="container mx-auto px-4 md:px-6 lg:px-12">
           <div className="flex items-center justify-between py-4">
             <p className="font-body text-sm text-muted-foreground">
               {allMarketplaceItems.length} items available
@@ -77,8 +77,8 @@ const Marketplace = () => {
       </section>
 
       {/* Marketplace Grid */}
-      <section className="container mx-auto px-6 lg:px-12 py-12 md:py-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+      <section className="container mx-auto px-4 md:px-6 lg:px-12 py-8 md:py-20">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-8">
           {allMarketplaceItems.map((item, index) => (
             <Link
               key={item.id}
@@ -110,21 +110,21 @@ const Marketplace = () => {
                 </div>
 
                 {/* Content */}
-                <div className="p-4 space-y-3">
+                <div className="p-3 md:p-4 space-y-2 md:space-y-3">
                   {/* Brand & Category */}
                   <div className="flex items-center justify-between">
-                    <span className="mono-caption">{item.brand}</span>
-                    <span className="mono-caption">{item.category}</span>
+                    <span className="mono-caption text-[9px] md:text-xs">{item.brand}</span>
+                    <span className="mono-caption text-[9px] md:text-xs hidden sm:inline">{item.category}</span>
                   </div>
 
                   {/* Name */}
-                  <h3 className="font-display text-lg leading-tight group-hover:text-muted-foreground transition-colors">
+                  <h3 className="font-display text-sm md:text-lg leading-tight group-hover:text-muted-foreground transition-colors line-clamp-1">
                     {item.name}
                   </h3>
 
                   {/* Price & Sustainability */}
                   <div className="flex items-center justify-between pt-2 border-t border-border/50">
-                    <p className="font-display text-xl">
+                    <p className="font-display text-base md:text-xl">
                       ${item.price?.toLocaleString()}
                     </p>
                     <div className="flex items-center gap-1.5">
@@ -149,15 +149,15 @@ const Marketplace = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="container mx-auto px-6 lg:px-12 py-20">
-        <div className="glass-card rounded-2xl p-12 text-center space-y-6 opacity-0 animate-fade-up">
+      <section className="container mx-auto px-4 md:px-6 lg:px-12 py-12 md:py-20">
+        <div className="glass-card rounded-xl md:rounded-2xl p-6 md:p-12 text-center space-y-4 md:space-y-6 opacity-0 animate-fade-up">
           <h2 className="editorial-subheading">
             Ready to Sell?
           </h2>
-          <p className="font-body text-muted-foreground max-w-md mx-auto">
+          <p className="font-body text-sm md:text-base text-muted-foreground max-w-md mx-auto">
             List items from your wardrobe and connect with conscious shoppers looking for quality pieces.
           </p>
-          <Button variant="premium" size="xl">
+          <Button variant="premium" size="lg">
             List Your Items
           </Button>
         </div>

@@ -14,15 +14,15 @@ const Outfits = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="container mx-auto px-6 lg:px-12 py-12 md:py-20">
-        <div className="max-w-3xl space-y-6 opacity-0 animate-fade-up">
+      <section className="container mx-auto px-4 md:px-6 lg:px-12 py-8 md:py-20">
+        <div className="max-w-3xl space-y-4 md:space-y-6 opacity-0 animate-fade-up">
           <p className="mono-caption">Outfit Builder</p>
           <h1 className="editorial-heading">
             Create Your
             <br />
             <em className="italic">Perfect Look</em>
           </h1>
-          <p className="font-body text-muted-foreground max-w-lg leading-relaxed">
+          <p className="font-body text-sm md:text-base text-muted-foreground max-w-lg leading-relaxed">
             Combine pieces from your wardrobe to create and save outfits. 
             Plan ahead, match occasions, and never repeat the same look.
           </p>
@@ -30,8 +30,8 @@ const Outfits = () => {
       </section>
 
       {/* Main Content */}
-      <section className="container mx-auto px-6 lg:px-12 py-12">
-        <div className="grid lg:grid-cols-3 gap-12">
+      <section className="container mx-auto px-4 md:px-6 lg:px-12 py-6 md:py-12">
+        <div className="grid lg:grid-cols-3 gap-8 md:gap-12">
           {/* Outfit Canvas */}
           <div className="lg:col-span-2 space-y-8">
             <div className="flex items-center justify-between">
@@ -43,7 +43,7 @@ const Outfits = () => {
             </div>
 
             {/* Drag & Drop Canvas */}
-            <div className="glass-card rounded-xl p-8 min-h-[500px] border border-dashed border-border">
+            <div className="glass-card rounded-xl p-4 md:p-8 min-h-[300px] md:min-h-[500px] border border-dashed border-border">
               {selectedItems.length === 0 ? (
                 <div className="h-full flex flex-col items-center justify-center text-center space-y-4">
                   <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center">

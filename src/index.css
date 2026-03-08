@@ -151,6 +151,19 @@
     @apply transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-[var(--shadow-elevated)];
   }
 
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  /* Hide scrollbar for horizontal scroll */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
   .image-shine {
     @apply relative overflow-hidden;
   }
