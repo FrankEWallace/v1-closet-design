@@ -48,12 +48,35 @@ export function Header() {
             ))}
           </nav>
 
-          <button
-            className="md:hidden p-2"
-            onClick={() => setMobileOpen(!mobileOpen)}
-          >
-            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          <div className="flex items-center gap-4">
+            {/* Desktop user menu */}
+            <div className="hidden md:flex items-center">
+              {user ? (
+                <Link to="/profile" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                  <Avatar className="w-8 h-8 border border-border">
+                    <AvatarImage src={user.avatar} />
+                    <AvatarFallback className="bg-secondary text-foreground text-xs font-medium">
+                      {user.displayName.slice(0, 2).toUpperCase()}
+                    </AvatarFallback>
+                  </Avatar>
+                </Link>
+              ) : (
+                <Link
+                  to="/auth"
+                  className="font-body text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Sign In
+                </Link>
+              )}
+            </div>
+
+            <button
+              className="md:hidden p-2"
+              onClick={() => setMobileOpen(!mobileOpen)}
+            >
+              {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
         </div>
       </div>
 
