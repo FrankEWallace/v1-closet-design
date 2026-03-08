@@ -35,17 +35,17 @@ const ItemDetail = () => {
 
   return (
     <Layout>
-      <div className="container mx-auto px-6 lg:px-12 py-8">
+      <div className="container mx-auto px-4 md:px-6 lg:px-12 py-4 md:py-8">
         {/* Back Link */}
         <Link 
           to="/" 
-          className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 font-body text-sm"
+          className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-6 md:mb-8 font-body text-sm"
         >
           <ArrowLeft size={16} />
           <span>Back to Wardrobe</span>
         </Link>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-20">
           {/* Image Gallery */}
           <div className="space-y-4 opacity-0 animate-fade-up">
             {/* Main Image */}
